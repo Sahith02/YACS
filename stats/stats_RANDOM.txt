@@ -1,0 +1,6 @@
+ ----- Task Completion Time for RANDOM ----- 
+Mean = 3.28
+Median = 3
+ ----- Job Completion Time for RANDOM ----- 
+Mean = 12.8
+Median = 15

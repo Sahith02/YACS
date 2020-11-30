@@ -1,0 +1,6 @@
+ ----- Task Completion Time for LL ----- 
+Mean = 2.9545454545454546
+Median = 3.0
+ ----- Job Completion Time for LL ----- 
+Mean = 14.2
+Median = 15
