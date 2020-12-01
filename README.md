@@ -30,6 +30,9 @@ Stop the running process auto_script.sh with CTRL-C  once the number of jobs tha
 
 ## Features
 
+<p align="center"><kbd><img src="./images/architecture.png" width="400px" style="border-radius: 500px;"></kbd><p>
+
+
 - Works under the Master/Worker architecture.
 - Respects Hadoop's MapReduce dependencies.
 - Has multiple choices of scheduling algorithms
