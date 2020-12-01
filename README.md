@@ -56,6 +56,9 @@ This python file the master daemon. It starts multiple threads that listen for j
 
 The master on receiving a job from the client segregates the job into map-reduce tasks (it follows MapReduce dependencies from the Hadoop framework) and decides which worker to send a certain task to depending on the scheduling algorithm selected. The master daemon is also protected from deadlocks by using binary semaphores.
 
+<p align="center"><kbd><img src="./images/master1.jpg" width="256px" style="border-radius: 500px;"></kbd><p>
+<p align="center"><kbd><img src="./images/master2.jpg" width="256px" style="border-radius: 500px;"></kbd><p>
+
 - ### C. Requests.py
 This is the Client file which sends jobs to the master daemon with exponential delays. It randomly assigns the duration of each task to be simulated by the workers and sends a JSON object in string format to the master.
 
@@ -72,7 +75,6 @@ This is the log file for the master daemon which logs 4 different types of actio
 - ### B. worker.log
 This is the log file for the worker daemon which logs 2 different types of actions. It logs when a specific task was received from the master daemon, and when a task has finished executing in the worker daemon.
 
-<p align="center"><kbd><img src="./images/master.jpg" width="512px" style="border-radius: 500px;"></kbd><p>
 
 ### 6. stats folder
 This folder has 2 types of files: `png` and `txt`. The image files are the graphs constructed which show the number of tasks plotted against time for each worker. The `txt` files have the calculated statistics, i.e. the mean and median time taken for the tasks and the jobs for each different type of scheduling algorithm.
