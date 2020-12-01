@@ -1,5 +1,8 @@
 # YACS
 
+<p align="center"><kbd><img src="./images/logo.jpg" width="128px" style="border-radius: 500px;"></kbd><p>
+
+
 This is a multithreaded centralized scheduler with a master/worker architecture. It mimics the nature of Hadoop's YARN for MapReduce on a smaller scale. 
 
 ## How To Run
@@ -25,9 +28,18 @@ bash auto_stats.sh RR
 #### Note
 Stop the running process auto_script.sh with CTRL-C  once the number of jobs that have been done equals the number given as the argument (The number of jobs done will be shown on the terminal). This may take a while depending on the number of requests.
 
+## Features
+
+- Works under the Master/Worker architecture.
+- Respects Hadoop's MapReduce dependencies.
+- Has multiple choices of scheduling algorithms
+- Automated bash script to run the worker daemon, master daemon, and client program.
+- Uses a multithreaded architecture with mutex locks and semaphores to prevent deadlocks.
+
 ## Files and their Functions
+
 ### 1. auto_script.sh
-This bash script runs each of the worker daemons, master daemon and the simulated requests from the client (Requests.py) in the background according to the config file given in the `src` directory. This script also stores a list of the process IDs of the daemons in another file in the `temp` directory.
+This bash script runs each of the worker daemons, master daemon, and the simulated requests from the client (Requests.py) in the background according to the config file given in the `src` directory. This script also stores a list of the process IDs of the daemons in another file in the `temp` directory.
 
 ### 2. auto_kill.sh
 The above bash script runs each daemon in the background. So even if you stop it with <kbd>CTRL-C</kbd>, it only stops that running bash script process. In order to stop all of the daemons started in the above bash script, each process must be stopped independently. This script opens the list of Process IDs from the `temp` directory and kills them.
@@ -60,5 +72,23 @@ This is the log file for the master daemon which logs 4 different types of actio
 - ### B. worker.log
 This is the log file for the worker daemon which logs 2 different types of actions. It logs when a specific task was received from the master daemon, and when a task has finished executing in the worker daemon.
 
+<p align="center"><kbd><img src="./images/master.jpg" width="512px" style="border-radius: 500px;"></kbd><p>
 
-## License
+### 6. stats folder
+This folder has 2 types of files: `png` and `txt`. The image files are the graphs constructed which show the number of tasks plotted against time for each worker. The `txt` files have the calculated statistics, i.e. the mean and median time taken for the tasks and the jobs for each different type of scheduling algorithm.
+
+### 7. temp folder
+This folder just holds the PIDs to kill which were created from in the `auto_script.py` in a `txt` format. This file gets overwritten every time the scripts are run.
+
+
+## Info
+This project was done as part of our Big Data course with a team of 4.
+
+## Team
+- Sahith Kurapati - [@Sahith02]( https://github.com/Sahith02 )
+- Om Shreenidhi - [@om719]( https://github.com/om719 )
+- Saksham Gupta - [@saksham49]( https://github.com/saksham49 )
+- Vishruth Reddy - [@vishruthreddy18]( https://github.com/vishruthreddy18 )
+
+
+<div>Logo made by <a href="https://www.designevo.com/logo-maker/" title="Free Online Logo Maker">DesignEvo free logo creator</a></div>
