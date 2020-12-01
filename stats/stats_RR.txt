@@ -1,6 +1,6 @@
  ----- Task Completion Time for RR ----- 
-Mean = 4.024390243902439
-Median = 4
+Mean = 3.8333333333333335
+Median = 4.0
  ----- Job Completion Time for RR ----- 
-Mean = 24.1
-Median = 27.0
+Mean = 24.8
+Median = 28.5

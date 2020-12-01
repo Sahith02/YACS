@@ -133,10 +133,10 @@ def plotYACS(FILE_PATH, algo):
     ax3.plot(x, y3)
 
     plt.xticks(rotation = -90)
-    ax1.set(ylabel='Number of tasks')
-    ax2.set(ylabel='Number of tasks')
-    ax3.set(xlabel = 'Time', ylabel='Number of tasks')
-    plt.savefig("stats/plot_" + sys.argv[3] + ".png")
+    ax1.set(ylabel='Number of tasks : Worker 1')
+    ax2.set(ylabel='Number of tasks : Worker 2')
+    ax3.set(xlabel = 'Time', ylabel='Number of tasks : Worker 3')
+    plt.savefig("stats/plot_task_" + sys.argv[3] + ".png")
 
 
 def plotAlgo(WORKER_FILE_PATH, MASTER_FILE_PATH, algo):
