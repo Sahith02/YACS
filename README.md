@@ -68,7 +68,7 @@ This is the Client file which sends jobs to the master daemon with exponential d
 This is the worker daemon which is responsible for the simulation of executing tasks in parallel. It simulates the effect of tasks being done by recalculating the time left for each task in the slot for every wall clock second.
 
 <p align="center">
-	<kbd><img src="./images/worker1.png" width="200px" style="border-radius: 500px;"></kbd>
+	<kbd><img src="./images/worker1.png" width="150px" style="border-radius: 500px;"></kbd>
 	<kbd><img src="./images/worker2.png" width="200px" style="border-radius: 500px;"></kbd>
 <p>
 
