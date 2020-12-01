@@ -72,7 +72,7 @@ This is the worker daemon which is responsible for the simulation of executing t
 
 <p align="center">
 	<kbd><img src="./images/worker1.png" width="100px" style="border-radius: 500px;"></kbd>
-	<kbd><img src="./images/worker2.png" width="150px" style="border-radius: 500px;"></kbd>
+	<kbd><img src="./images/worker2.png" width="200px" style="border-radius: 500px;"></kbd>
 <p>
 
 
