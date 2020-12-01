@@ -91,6 +91,18 @@ def YACSMaster(FILE_PATH):
     return (mean, median)
 
 
+def plotAlgo(FILE_PATH, algo):
+    worker = YACSWorker(FILE_PATH)
+    master = YACSMaster(FILE_PATH)
+    x_axis = ["Mean for Worker", "Median for Worker", "Mean for Job", "Median for Job"] 
+    y_axis = worker + master 
+
+    fig = plt.figure(figsize = (10, 5)) 
+    plt.bar(x_axis, y_axis, color ='maroon', width = 0.4)  
+    plt.ylabel("Average Time Taken") 
+    plt.title("Mean and Median for Tasks and Jobs for " + str(algo)) 
+    plt.savefig("stats/plot_mean_median_" + sys.argv[3] + ".png") 
+
 
 def plotYACS(FILE_PATH, algo):
     file = open(FILE_PATH)
@@ -152,7 +164,6 @@ answer = YACSMaster(sys.argv[2])
 print(" ----- Job Completion Time for " + sys.argv[3] + " ----- ")
 print("Mean = " + str(answer[0]))
 print("Median = " + str(answer[1]))
-
 
 
 plotYACS(sys.argv[1], sys.argv[3])
