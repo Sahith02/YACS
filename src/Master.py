@@ -34,7 +34,7 @@ global_job_no=0
 
 def wait(locking):
 	"""
-	Wait function for the semaphore to either enter the critical section or to be prevented form entering the critical section
+	Wait function for the semaphore to either enter the critical section or to be prevented from entering the critical section
 	"""
 	while(locking[0]<1):
 		pass
